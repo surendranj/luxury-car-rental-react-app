@@ -9,18 +9,17 @@ const HeroSection = () => {
     const windowSize = useWinDims();
     return (
         <section className="w-full h-screen relative">
-            {/* Hero Image */}
-            <div className="relative h-full w-full">
-                <Image
-                    src={HeroImage}
-                    alt="Hero Image"
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition={windowSize?.width && windowSize.width < 768 ? "40% 0%" : "top right"}
-                />
-            </div>
-            {/* Hero CTA */}
-            <Container className="absolute top-0 left-0 h-full w-full bg-gradient-to-br from-[#252525] to-[rgba(255, 255, 255, 0)]">
+            <Container className="h-full relative">
+                {/* Hero Image */}
+                <div className="relative h-full w-full">
+                    <Image
+                        src={HeroImage}
+                        alt="Hero Image"
+                        layout="fill"
+                        objectFit="cover"
+                        objectPosition={windowSize?.width && windowSize.width < 768 ? "40% 0%" : "top right"}
+                    />
+                </div>
                 <Cta />
             </Container>
         </section>

@@ -7,6 +7,7 @@ const Home: NextPage = () => {
         <div className="bg-black">
             <Appbar />
             <HeroSection />
+            <HeroSection />
         </div>
     );
 };
