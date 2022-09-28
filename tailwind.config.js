@@ -16,9 +16,7 @@ module.exports = {
             orange: "#E4572E",
             white: "#EFEFEF",
         },
-        maxWidth: {
-            custom: "1160px",
-        },
+
         extend: {
             fontFamily: {
                 sans: ["Prompt", ...defaultTheme.fontFamily.sans],

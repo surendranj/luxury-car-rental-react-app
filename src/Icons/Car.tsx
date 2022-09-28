@@ -1,0 +1,40 @@
+import React from "react";
+
+const Car = () => {
+    return (
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M2.75 20.625H41.25"
+                stroke="#E4572E"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M38.5 31.625V35.75C38.5 36.1147 38.3551 36.4644 38.0973 36.7223C37.8394 36.9801 37.4897 37.125 37.125 37.125H33C32.6353 37.125 32.2856 36.9801 32.0277 36.7223C31.7699 36.4644 31.625 36.1147 31.625 35.75V31.625"
+                stroke="#E4572E"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M12.375 31.625V35.75C12.375 36.1147 12.2301 36.4644 11.9723 36.7223C11.7144 36.9801 11.3647 37.125 11 37.125H6.875C6.51033 37.125 6.16059 36.9801 5.90273 36.7223C5.64487 36.4644 5.5 36.1147 5.5 35.75V31.625"
+                stroke="#E4572E"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path d="M11 26.125H13.75" stroke="#E4572E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M30.25 26.125H33" stroke="#E4572E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path
+                d="M38.5 20.625L33.3609 9.075C33.2543 8.83065 33.0789 8.62257 32.8562 8.4761C32.6334 8.32963 32.3729 8.25107 32.1063 8.25H11.8937C11.6271 8.25107 11.3666 8.32963 11.1438 8.4761C10.9211 8.62257 10.7457 8.83065 10.6391 9.075L5.5 20.625V31.625H38.5V20.625Z"
+                stroke="#E4572E"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    );
+};
+
+export default Car;

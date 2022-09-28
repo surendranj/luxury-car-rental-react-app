@@ -14,8 +14,9 @@
         "isolatedModules": true,
         "jsx": "preserve",
         "incremental": true,
-        "noUnusedLocals": true
+        "noUnusedLocals": true,
+        "downlevelIteration": true
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "public/images/brands/index.ts"],
     "exclude": ["node_modules"]
 }

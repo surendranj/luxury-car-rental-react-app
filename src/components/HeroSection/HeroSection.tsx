@@ -8,8 +8,8 @@ import useWinDims from "../../hooks/useWinDims";
 const HeroSection = () => {
     const windowSize = useWinDims();
     return (
-        <section className="w-full h-screen relative">
-            <Container className="h-full relative">
+        <section className="w-full h-screen relative ">
+            <Container className="h-full relative ">
                 {/* Hero Image */}
                 <div className="relative h-full w-full">
                     <Image
