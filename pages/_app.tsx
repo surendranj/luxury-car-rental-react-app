@@ -1,8 +1,20 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import { Provider } from "react-redux";
+import store from "../src/app/store";
+import Layout from "../src/components/Layout/Layout";
+import Transition from "../src/components/PageTransition/Transition";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+    return (
+        <Provider store={store}>
+            <Layout>
+                <Transition>
+                    <Component {...pageProps} />
+                </Transition>
+            </Layout>
+        </Provider>
+    );
 }
 
-export default MyApp
+export default MyApp;

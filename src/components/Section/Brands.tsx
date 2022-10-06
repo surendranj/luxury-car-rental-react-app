@@ -15,11 +15,23 @@ import porsche from "../../../public/images/brands/porsche.png";
 import Image from "next/image";
 import Heading1 from "../Typography/Heading1";
 
+import { motion } from "framer-motion";
+
 type BrandContainerProps = {
     children: React.ReactNode;
 };
 const BrandContainer = ({ children }: BrandContainerProps) => {
-    return <div className="relative w-10 h-10">{children}</div>;
+    return (
+        <motion.div
+            initial={{ y: 10, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ type: "tween", delay: 0.2, duration: 1 }}
+            viewport={{ once: true }}
+            className="relative w-10 h-10 tablet:w-20 tablet:h-20"
+        >
+            {children}
+        </motion.div>
+    );
 };
 
 const Brands = () => {
@@ -27,7 +39,7 @@ const Brands = () => {
         <section className="w-full">
             <Container className="px-6 py-20">
                 <Heading1 className="text-center mb-6">Our Brands</Heading1>
-                <div className="flex justify-center flex-wrap gap-4">
+                <div className="flex justify-center flex-wrap gap-4 tablet:gap-10 tablet:mt-10">
                     <BrandContainer>
                         <Image src={astonMartin} alt="Aston Martin" layout="fill" />
                     </BrandContainer>

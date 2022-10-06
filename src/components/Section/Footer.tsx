@@ -11,6 +11,8 @@ import YoutubeLogo from "../../../public/images/social/YoutubeLogo.svg";
 import Image from "next/image";
 import Paragraph from "../Typography/Paragraph";
 
+import { motion } from "framer-motion";
+
 const footerLinks = [
     { title: "Company", links: ["About", "Newsroom", "Catalog", "Feedback"] },
     { title: "My Account", links: ["Blog", "FAQ"] },
@@ -28,12 +30,13 @@ type FooterLinkContainerProps = {
     children: React.ReactNode;
 };
 const FooterLinkContainer = ({ className, children }: FooterLinkContainerProps) => {
-    return <div className={`w-28 ${className}`}>{children}</div>;
+    return <div className={`w-28 tablet:w-36 ${className}`}>{children}</div>;
 };
 
 type FooterLinksProps = {
     footerLink: { title: string; links: string[] };
 };
+
 const FooterLinks = ({ footerLink }: FooterLinksProps) => {
     return (
         <FooterLinkContainer>
@@ -44,7 +47,9 @@ const FooterLinks = ({ footerLink }: FooterLinksProps) => {
                         <div key={link} className="mt-1">
                             <Link href={`/${link.toLocaleLowerCase()}`}>
                                 <a>
-                                    <Footnote2>{link}</Footnote2>
+                                    <Footnote2 whileHover={{ color: "#E4572E", textDecoration: "underline" }}>
+                                        {link}
+                                    </Footnote2>
                                 </a>
                             </Link>
                         </div>
@@ -65,9 +70,13 @@ const SocialLinks = ({ socialLink }: SocialLinksProps) => {
             <div className="mt-2 flex gap-x-2">
                 {socialLink.logos.map((logo, idx) => {
                     return (
-                        <div className="relative mt-1 w-5 h-5" key={`${idx}`}>
+                        <motion.div
+                            whileHover={{ y: -5 }}
+                            className="relative mt-1 w-5 h-5 tablet:w-8 tablet:h-8 hover:cursor-pointer"
+                            key={`${idx}`}
+                        >
                             <Image src={logo} alt="apple logo" objectFit="contain" />
-                        </div>
+                        </motion.div>
                     );
                 })}
             </div>
@@ -77,14 +86,16 @@ const SocialLinks = ({ socialLink }: SocialLinksProps) => {
 const Footer = () => {
     return (
         <section className="w-full">
-            <Container className="px-6 py-20 flex flex-wrap gap-10">
+            <Container className="px-6 tablet:px-10 py-20 flex flex-wrap gap-10">
                 {footerLinks.map((link) => (
                     <FooterLinks footerLink={link} key={link.title} />
                 ))}
                 {socialLinks.map((link) => (
                     <SocialLinks socialLink={link} key={link.title} />
                 ))}
-                <Paragraph className="text-[10px] font-thin">Copyright &#169; 2022 Top Down Private Limited</Paragraph>
+                <Paragraph className="text-[10px] font-thin w-full ">
+                    Copyright &#169; 2022 Top Down Private Limited
+                </Paragraph>
             </Container>
         </section>
     );

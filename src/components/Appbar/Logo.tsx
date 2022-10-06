@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import SVGLogo from "../../../public/images/logo.svg";
+import SVGLogo from "../../../public/images/icons/Logo.svg";
 
 type LogoProps = {
     className?: string;

@@ -11,16 +11,16 @@ module.exports = {
             laptop: "1024px",
             desktop: "1280px",
         },
-        colors: {
-            black: "#191919",
-            orange: "#E4572E",
-            white: "#EFEFEF",
-        },
 
         extend: {
             fontFamily: {
                 sans: ["Prompt", ...defaultTheme.fontFamily.sans],
                 display: ["Bebas Neue"],
+            },
+            colors: {
+                black: "#191919",
+                orange: "#E4572E",
+                white: "#EFEFEF",
             },
         },
     },
