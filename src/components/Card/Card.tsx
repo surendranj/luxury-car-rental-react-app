@@ -23,7 +23,7 @@ const Card = ({ icon, heading, content }: CardProps) => {
             {/* <LocationIcon /> */}
             {icon}
             {/* card heading */}
-            <Heading6 className="tablet:mt-4">{heading}</Heading6>
+            <Heading6 className="text-center tablet:mt-4">{heading}</Heading6>
             {/* card description */}
             <Paragraph className="text-center mt-4 tablet:mt-8">{content}</Paragraph>
         </motion.div>
