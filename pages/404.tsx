@@ -14,7 +14,7 @@ const Custom404 = () => {
                 <div className="flex flex-col justify-center items-center gap-5">
                     <Heading1 className="text-9xl">404</Heading1>
                     <Paragraph>Page Not Found</Paragraph>
-                    <BtnPrimary buttonText="Go Back" handleClick={() => router.back()} />
+                    <BtnPrimary handleClick={() => router.back()}>Go Back</BtnPrimary>
                 </div>
             </Container>
         </section>
