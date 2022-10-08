@@ -3,15 +3,12 @@ import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import store from "../src/app/store";
 import Layout from "../src/components/Layout/Layout";
-import Transition from "../src/components/PageTransition/Transition";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <Provider store={store}>
             <Layout>
-                <Transition>
-                    <Component {...pageProps} />
-                </Transition>
+                <Component {...pageProps} />
             </Layout>
         </Provider>
     );

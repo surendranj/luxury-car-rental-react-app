@@ -4,6 +4,7 @@ import Heading1 from "../Typography/Heading1";
 import Heading6 from "../Typography/Heading6";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Cta = () => {
     return (
@@ -22,7 +23,11 @@ const Cta = () => {
                         <span className="text-orange">$800</span> / Day
                     </span>
                 </div>
-                <BtnPrimary buttonText="Book Now" ghost className="mt-10" />
+                <BtnPrimary ghost className="mt-10">
+                    <Link href={"/garage"}>
+                        <a>Book Now</a>
+                    </Link>
+                </BtnPrimary>
             </div>
         </motion.div>
     );

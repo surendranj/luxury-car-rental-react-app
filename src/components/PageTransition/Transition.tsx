@@ -7,10 +7,11 @@ type TransitionProps = {
 };
 const Transition = ({ children }: TransitionProps) => {
     const router = useRouter();
+
     return (
         <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
             <motion.div
-                key={router.asPath}
+                key={router.pathname}
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 20, opacity: 0 }}

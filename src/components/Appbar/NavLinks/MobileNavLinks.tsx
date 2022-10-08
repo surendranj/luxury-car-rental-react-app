@@ -21,14 +21,14 @@ const MobileNavLinks = () => {
                 <NavLink toggle={() => dispatch(toggleNav())} text="Home" href="/" />
                 <NavLink toggle={() => dispatch(toggleNav())} text="Garage" href="/garage" />
                 <NavLink toggle={() => dispatch(toggleNav())} text="About Us" href="/about-us" />
-                <NavLink toggle={() => dispatch(toggleNav())} text="Contact" href="/contact" />
+                <NavLink toggle={() => dispatch(toggleNav())} text="Faq" href="/faq" />
                 <li>
                     <ul className="flex gap-x-7">
                         <li>
-                            <BtnPrimary buttonText="Sign In" className="text-sm w-[100px]" />
+                            <BtnPrimary>Sign In</BtnPrimary>
                         </li>
                         <li>
-                            <BtnPrimary buttonText="Register" ghost className="text-sm w-[100px]" />
+                            <BtnPrimary ghost>Register</BtnPrimary>
                         </li>
                     </ul>
                 </li>

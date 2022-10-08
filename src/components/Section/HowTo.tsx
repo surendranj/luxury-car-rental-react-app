@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import CalendarCheck from "../../Icons/CalendarCheck";
 import Car from "../../Icons/Car";
@@ -35,7 +36,11 @@ const HowTo = () => {
                         />
                     </div>
 
-                    <BtnPrimary buttonText="Book Now" className="mt-4" />
+                    <BtnPrimary className="mt-4 w-28">
+                        <Link href={"/garage"} scroll={false}>
+                            <a>Get Started</a>
+                        </Link>
+                    </BtnPrimary>
                 </div>
             </Container>
         </section>

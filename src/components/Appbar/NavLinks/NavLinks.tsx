@@ -10,7 +10,7 @@ const NavLinks = () => {
                     <NavLink text="Home" href="/" />
                     <NavLink text="Garage" href="/garage" />
                     <NavLink text="About Us" href="/about-us" />
-                    <NavLink text="Contact" href="/contact" />
+                    <NavLink text="Faq" href="/faq" />
                 </ul>
             </li>
 
@@ -18,10 +18,10 @@ const NavLinks = () => {
             <li>
                 <ul className="flex gap-x-7">
                     <li>
-                        <BtnPrimary buttonText="Sign In" />
+                        <BtnPrimary>Sign In</BtnPrimary>
                     </li>
                     <li>
-                        <BtnPrimary buttonText="Register" ghost />
+                        <BtnPrimary ghost>Register</BtnPrimary>
                     </li>
                 </ul>
             </li>

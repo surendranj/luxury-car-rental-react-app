@@ -2,13 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 
 type BtnPrimaryProps = {
-    buttonText: string;
+    children: React.ReactNode;
     className?: string;
     ghost?: boolean;
     handleClick?: () => void;
 };
 
-const BtnPrimary = ({ buttonText, className, ghost, handleClick }: BtnPrimaryProps) => {
+const BtnPrimary = ({ children, className, ghost, handleClick }: BtnPrimaryProps) => {
     return (
         <motion.button
             className={`font-sans text-xs rounded-sm w-[80px] h-[35px] desktop:w-[100px] text-white ${className} ${
@@ -18,7 +18,7 @@ const BtnPrimary = ({ buttonText, className, ghost, handleClick }: BtnPrimaryPro
             whileTap={{ scale: 0.9 }}
             onClick={handleClick}
         >
-            {buttonText}
+            {children}
         </motion.button>
     );
 };

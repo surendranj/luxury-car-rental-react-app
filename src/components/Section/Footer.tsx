@@ -67,7 +67,7 @@ const SocialLinks = ({ socialLink }: SocialLinksProps) => {
     return (
         <FooterLinkContainer>
             <Footnote>{socialLink.title}</Footnote>
-            <div className="mt-2 flex gap-x-2">
+            <motion.div animate className="mt-2 flex gap-x-2">
                 {socialLink.logos.map((logo, idx) => {
                     return (
                         <motion.div
@@ -79,7 +79,7 @@ const SocialLinks = ({ socialLink }: SocialLinksProps) => {
                         </motion.div>
                     );
                 })}
-            </div>
+            </motion.div>
         </FooterLinkContainer>
     );
 };

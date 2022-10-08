@@ -7,6 +7,7 @@ import Paragraph from "../src/components/Typography/Paragraph";
 
 const Custom404 = () => {
     const router = useRouter();
+
     return (
         <section className="w-full">
             <Container className="w-full h-screen px-6 tablet:px-10 flex justify-center items-center">

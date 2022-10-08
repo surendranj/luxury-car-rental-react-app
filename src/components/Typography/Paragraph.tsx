@@ -1,12 +1,17 @@
+import { motion, MotionProps } from "framer-motion";
 import React from "react";
 
-type ParagraphProps = {
+interface ParagraphProps extends MotionProps {
     className?: string;
     children: React.ReactNode;
-};
+}
 
-const Paragraph = ({ className, children }: ParagraphProps) => {
-    return <p className={`text-white text-sm opacity-80 ${className}`}>{children}</p>;
+const Paragraph = ({ className, children, ...motionProps }: ParagraphProps) => {
+    return (
+        <motion.p {...motionProps} className={`text-white text-sm opacity-80 ${className}`}>
+            {children}
+        </motion.p>
+    );
 };
 
 export default Paragraph;

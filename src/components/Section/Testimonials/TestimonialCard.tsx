@@ -18,9 +18,9 @@ const TestimonialCard = ({ content, name, title, image, carouselRef, ...motionPr
     return (
         <motion.div ref={carouselRef} {...motionProps} className="flex mt-14 min-w-[320px] ">
             {/* Testimonial */}
-            <div className="flex justify-between min-h-[250px]">
+            <div className="flex justify-between ">
                 <Quote className="self-start" />
-                <div className="flex flex-col justify-start max-w-[75%] self-center gap-y-4 my-10">
+                <div className="flex flex-col justify-start max-w-[75%] self-start gap-y-4 my-10">
                     <Paragraph>{content}</Paragraph>
 
                     {/* stars */}
