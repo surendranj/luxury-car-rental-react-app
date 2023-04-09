@@ -94,7 +94,7 @@ const Footer = () => {
                     <SocialLinks socialLink={link} key={link.title} />
                 ))}
                 <Paragraph className="text-[10px] font-thin w-full ">
-                    Copyright &#169; 2022 Top Down Private Limited
+                    Copyright &copy; {new Date().getFullYear()} Top Down Private Limited
                 </Paragraph>
             </Container>
         </section>
